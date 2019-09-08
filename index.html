@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number Game</title>
+</head>
+<body>
+<script>
+    var arr =[];
+    for (let i=1;i<=100;i++){
+        arr.push(i);
+    }
+    console.log(arr);
+    var count =0;
+    var nums = Math.floor(Math.random() * 100);
+    while (count<3){
+        let guessNum = prompt("Nhập số để đoán: ");
+        if (guessNum < nums){
+            alert("Quá nhỏ" +".Đã đoán "+count + "lần")
+        }
+        else if (guessNum>nums){
+            alert("Quá lớn" +".Đã đoán "+count + "lần")
+        }
+        else if (guessNum == nums){
+            alert("You win");
+            break;
+        }
+        count++;
+    }
+    console.log(nums);
+
+
+</script>
+</body>
+</html>
